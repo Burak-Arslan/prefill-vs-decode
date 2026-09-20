@@ -1,0 +1,18 @@
+# Pixel 10 Pro XL, Tensor G5, Android 17
+# Google AI Edge Gallery 1.0.19, built-in benchmark, 3 runs, app-reported averages
+# Model: Gemma-4-E2B-it (LiteRT-LM). Two builds of the same model: a CPU/GPU one
+# (2.6 GB) and a TPU one (4.0 GB). On this device the app offers no GPU option
+# for the CPU/GPU build, only CPU, which matches what the Vulkan run showed.
+
+# matched settings: 256 prefill tokens, 256 decode tokens, 3 runs
+accelerator  prefill tok/s  decode tok/s  time to first token  first init  steady init
+TPU               2005.69         19.97              0.18 s     3957.95 ms   3045.31 ms
+CPU                199.69         19.22              1.34 s     6806.29 ms    662.40 ms
+CPU (repeat)       213.67         18.22              1.25 s     5944.18 ms    737.44 ms
+
+# TPU ratio over the CPU mean: prefill 9.7x, decode 1.07x, first token 7.2x
+# The TPU pays for it in session warm-up: 3045 ms against roughly 700 ms.
+
+# earlier TPU run with 512 prefill / 128 decode, same device and model
+accelerator  prefill tok/s  decode tok/s  time to first token  first init  steady init
+TPU               2060.03         20.11              0.30 s     6339.58 ms   4690.79 ms

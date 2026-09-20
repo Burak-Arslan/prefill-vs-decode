@@ -1,0 +1,19 @@
+### qwen3-1.7b-q4_k_m.gguf threads=2
+| qwen3 1.7B Q4_K - Medium       |   1.03 GiB |     1.72 B | CPU        |       2 |           pp512 |         50.57 ± 0.77 |
+| qwen3 1.7B Q4_K - Medium       |   1.03 GiB |     1.72 B | CPU        |       2 |           tg128 |         11.85 ± 0.21 |
+### qwen3-1.7b-q4_k_m.gguf threads=4
+| qwen3 1.7B Q4_K - Medium       |   1.03 GiB |     1.72 B | CPU        |       4 |           pp512 |         92.60 ± 2.87 |
+| qwen3 1.7B Q4_K - Medium       |   1.03 GiB |     1.72 B | CPU        |       4 |           tg128 |         17.43 ± 0.74 |
+### qwen3-1.7b-q4_k_m.gguf threads=6
+| qwen3 1.7B Q4_K - Medium       |   1.03 GiB |     1.72 B | CPU        |       6 |           pp512 |        107.59 ± 6.00 |
+| qwen3 1.7B Q4_K - Medium       |   1.03 GiB |     1.72 B | CPU        |       6 |           tg128 |         15.66 ± 2.17 |
+### qwen3-1.7b-q8_0.gguf threads=2
+| qwen3 1.7B Q8_0                |   1.70 GiB |     1.72 B | CPU        |       2 |           pp512 |         65.38 ± 4.78 |
+| qwen3 1.7B Q8_0                |   1.70 GiB |     1.72 B | CPU        |       2 |           tg128 |         10.84 ± 0.91 |
+### qwen3-1.7b-q8_0.gguf threads=4
+| qwen3 1.7B Q8_0                |   1.70 GiB |     1.72 B | CPU        |       4 |           pp512 |        108.56 ± 0.93 |
+| qwen3 1.7B Q8_0                |   1.70 GiB |     1.72 B | CPU        |       4 |           tg128 |         10.84 ± 0.43 |
+### qwen3-1.7b-q8_0.gguf threads=6
+| qwen3 1.7B Q8_0                |   1.70 GiB |     1.72 B | CPU        |       6 |           pp512 |        138.12 ± 8.86 |
+| qwen3 1.7B Q8_0                |   1.70 GiB |     1.72 B | CPU        |       6 |           tg128 |         10.19 ± 0.77 |
+bitti

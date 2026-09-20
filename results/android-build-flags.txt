@@ -1,0 +1,11 @@
+# The missing ARM instruction trap, measured on the Pixel 10 Pro XL
+# Same binary source, same model (qwen3 1.7B Q4_K_M), same device.
+# First build: cmake test "HAVE_DOTPROD - Failed", so a baseline armv8-a kernel
+# was compiled even though /proc/cpuinfo lists asimddp, i8mm, sve2.
+# Second build: -DGGML_CPU_ARM_ARCH="armv8.2-a+dotprod+i8mm", test succeeds.
+
+build                              threads  pp512 t/s  tg128 t/s
+baseline armv8-a                   8         25.28      8.37
+baseline armv8-a                   4         22.35     11.90
+armv8.2-a+dotprod+i8mm             4         92.60     17.43
+armv8.2-a+dotprod+i8mm             6        107.59     15.66

@@ -1,0 +1,14 @@
+# The repeated-prompt trap, measured on the desktop through LM Studio
+# Model qwen/qwen3-1.7b (8bit MLX), prompt of 1667-1676 tokens, max_tokens 8
+
+same prompt three times
+  1. ttft 210 ms  (1667 prompt tokens, apparent prefill  7940 tok/s)
+  2. ttft  98 ms  (1667 prompt tokens, apparent prefill 17001 tok/s)
+  3. ttft  97 ms  (1667 prompt tokens, apparent prefill 17185 tok/s)
+
+unique prefix on every request
+  1. ttft 599 ms  (1675 prompt tokens, real prefill 2794 tok/s)
+  2. ttft 593 ms  (1674 prompt tokens, real prefill 2825 tok/s)
+  3. ttft 600 ms  (1676 prompt tokens, real prefill 2793 tok/s)
+
+median 98 ms vs 599 ms, a 6.1x overstatement of prefill throughput

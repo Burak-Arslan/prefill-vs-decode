@@ -1,0 +1,8 @@
+# model weights and third party checkouts stay out of the repo
+models/
+*.gguf
+*.safetensors
+llama.cpp/
+mlx-swift-examples/
+build*/
+.DS_Store

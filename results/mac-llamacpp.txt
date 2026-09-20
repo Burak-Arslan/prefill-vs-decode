@@ -1,0 +1,9 @@
+# MacBook Pro, M3 Max (16 CPU / 40 GPU cores, 48 GB), macOS 26.4.1
+# llama.cpp b3cf0325, Metal backend, llama-bench, 3 repetitions
+# same GGUF files that were pushed to the Pixel
+
+| model                    | size     | test  | t/s              |
+| qwen3 1.7B Q4_K - Medium | 1.03 GiB | pp512 | 3566.16 ± 19.06  |
+| qwen3 1.7B Q4_K - Medium | 1.03 GiB | tg128 |  206.92 ± 2.03   |
+| qwen3 1.7B Q8_0          | 1.70 GiB | pp512 | 3728.70 ± 31.66  |
+| qwen3 1.7B Q8_0          | 1.70 GiB | tg128 |  150.34 ± 0.60   |

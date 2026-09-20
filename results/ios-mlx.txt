@@ -1,0 +1,23 @@
+# iPhone 15 Pro (iPhone16,1, A17 Pro), iOS 26.6.2
+# MLX Swift, mlx-community/Qwen3-1.7B-4bit, thinking off (/no_think)
+# 1 warm-up discarded, median of 3 timed runs, unique nonce per prompt
+# timings from GenerateCompletionInfo (promptTime, generateTime)
+
+device=iPhone16,1 ios=26.6.2
+model=mlx-community/Qwen3-1.7B-4bit
+classify: warmup
+classify run 1: prompt 51 tok in 196 ms (261 tok/s), gen 5 tok (44.6 tok/s)
+classify run 2: prompt 50 tok in 196 ms (255 tok/s), gen 6 tok (44.8 tok/s)
+classify run 3: prompt 52 tok in 199 ms (262 tok/s), gen 5 tok (44.6 tok/s)
+extract: warmup
+extract run 1: prompt 1692 tok in 5768 ms (293 tok/s), gen 49 tok (36.3 tok/s)
+extract run 2: prompt 1694 tok in 6919 ms (245 tok/s), gen 55 tok (36.7 tok/s)
+extract run 3: prompt 1692 tok in 6953 ms (243 tok/s), gen 49 tok (36.6 tok/s)
+generate: warmup
+generate run 1: prompt 54 tok in 572 ms (94 tok/s), gen 392 tok (29.6 tok/s)
+generate run 2: prompt 57 tok in 575 ms (99 tok/s), gen 400 tok (29.6 tok/s)
+generate run 3: prompt 55 tok in 573 ms (96 tok/s), gen 400 tok (29.6 tok/s)
+--- summary ---
+classify: prompt 51 tok, prefill 261 tok/s, decode 44.6 tok/s, prompt time 196 ms
+extract: prompt 1692 tok, prefill 245 tok/s, decode 36.6 tok/s, prompt time 6919 ms
+generate: prompt 54 tok, prefill 96 tok/s, decode 29.6 tok/s, prompt time 573 ms
