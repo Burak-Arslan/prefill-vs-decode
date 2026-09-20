@@ -150,10 +150,6 @@ of a 400 token budget thinking, leaving a single token for the answer. The
 `/no_think` switch is applied only to models whose name contains qwen3, and on
 qwen3.6-27b it did not take effect.
 
-**A phone with the screen off is not a benchmark rig.** The iOS run stalled at
-13 MB of a 1 GB download for twenty minutes because the app was suspended. It
-finished in under a minute once it returned to the foreground.
-
 **Decode is not one number per model.** On the same phone with the same settings,
 36.6 tok/s over fifty generated tokens and 29.6 over four hundred. My first
 explanation was the growing KV cache, and the data does not support it: the run
